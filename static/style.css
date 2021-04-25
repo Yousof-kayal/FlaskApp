@@ -1,0 +1,79 @@
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: lightgreen;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.body{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.qr{
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  float: right;
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+}
+
+.input{
+  float: left;
+  margin-top: 5px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.upperMargin{
+  margin-top: 5px;
+}
+
+
+.center{
+  margin-left: 10px ;
+
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

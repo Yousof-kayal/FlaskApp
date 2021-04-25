@@ -1,0 +1,64 @@
+<!doctype HTML>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR CODE</title>
+  <meta name="description" content="QR CODE Generator">
+  <meta name="author" content="Yousof Kayal">
+
+  <link rel="stylesheet" href="static/normalize.css"/>
+    <link rel="stylesheet" href="static/style.css"/>
+
+</head>
+
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+</div>
+
+<div class = "body clearfix">
+    {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+                    <p>{{ message }}</p>
+               {% endfor %}
+         {% endif %}
+      {% endwith %}
+
+    <div class = "input">
+        <form action="/qrgenerated" method="POST">
+        <input name="text" placeholder="Enter QR code value:">
+        <button type="submit" type="button">Submit</button>
+</form>
+    </div>
+
+    <div class = "qr">
+
+    <h3 class="center">QR code download links</h3>
+       <ul>
+            {% for item in contents %}
+              <li>
+                <a href="/download" class="link">{{ item.Key }}</a>
+              </li>
+            {% endfor %}
+       </ul>
+    </div>
+
+</div>
+</form>
+</div>
+
+
+<div class="footer">
+    <span>Created by Yousof Kayal </span>
+    <br/>
+    <span>&copy; 2021 </span>
+</div>
+
+
+
+</body>
+</html>

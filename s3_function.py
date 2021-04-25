@@ -2,6 +2,9 @@ import boto3
 global bucket
 bucket = 'qrgenerator-code'
 
+os.environ['AWS_PROFILE'] = "Profile1"
+os.environ['AWS_DEFAULT_REGION'] = "us-west-2"
+
 def upload_file(filename: object, bucket: object) -> object:
     object_name = (f'{filename}')
     s3_client = boto3.client('s3')

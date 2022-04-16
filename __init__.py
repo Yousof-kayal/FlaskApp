@@ -72,11 +72,8 @@ def textfield():
     return render_template("base.html", contents=contents)
 
 def QR(filename):
-#    connection = sqlite3.connect('inviteeslist.db')
     QR = pyqrcode.create(filename)
     QR.png(f'{filename}.png', scale=8)
-
-#    connection.execute(f"INSERT OR REPLACE INTO (CODE,NAME) VALUES ('x','x')")
     return filename
 
 @app.route(f'/code')

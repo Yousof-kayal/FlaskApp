@@ -15,7 +15,7 @@ import os
 
 global bucket
 app = Flask(__name__)
-app.secret_key = "eih1zWk94BcZPJu6SMgZSVUydrersFR41bgWCItP"
+app.secret_key = ""
 DOWNLOAD_CODE = "Codes"
 BUCKET = "qrgenerator-code"
 processed_text=''
@@ -89,17 +89,6 @@ def download():
         output = download_file('www.google.com.png', BUCKET)
 
         return send_file(output, as_attachment=False)
-
-
-# @app.route('/QR', methods= ['GET'])
-# def QRimage():
-#      global processed_text
-#      im = Image.open(f'Codes/{processed_text}.png')
-#      data = io.BytesIO()
-#      im.save(data, "PNG")
-#      encoded_img_data = base64.b64encode(data.getvalue())
-#      img_data = encoded_img_data.decode('utf-8')
-#      return render_template('base.html', value = img_data)
 
 
 if __name__ == '__main__':

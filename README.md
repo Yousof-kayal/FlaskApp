@@ -1,5 +1,5 @@
 # FlaskApp
-This web application, created using Flask, takes in any string value and converts it into a QR code exported to an S3 bucket using an AWS API. The user can also download the QR code from that S3 bucket. Whose contents will be listed in the web app. The application needs an AWS Access Key ID and the Secret Access Key to access the S3 bucket. Which will be provided in a .aws folder in a text file.
+This web application, created using Flask, takes in any string value and converts it into a QR code exported to an S3 bucket using an AWS API. The user can also download the QR code from that S3 bucket. Whose contents will be listed in the web app. The application needs an AWS Access Key ID and the Secret Access Key to access the S3 bucket.
 
 Uploading to S3
 

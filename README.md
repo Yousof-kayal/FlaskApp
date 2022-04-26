@@ -1,8 +1,8 @@
 # FlaskApp
 This web application, created using Flask, takes in any string value and converts it into a QR code exported to an S3 bucket using an AWS API. The user can also download the QR code from that S3 bucket. Whose contents will be listed in the web app. The application needs an AWS Access Key ID and the Secret Access Key to access the S3 bucket.
 
-**Uploading to S3
-**
+**Uploading to S3**
+
 I have built the program to take in a text box value at the click of a button from HTML and sent that to python using flask functionality. After that, python processes the information, and converts it into a QR code, which it saves in the main directory. Next, the program looks for that file in the directory, and using an upload class that utilizes the S3 API, it sends the file to the S3 bucket.
 
 **Downloading from S3**
@@ -15,6 +15,7 @@ The web app is hosted on an EC2 instance that uses a Ubuntu AMI. I first created
 There is a problem with permissions and my code with Ubuntu Linux, so on this server, users cannot upload and download any files, but they can view the S3 bucket’s contents. I have tried solving this with countless acquaintances and even people in the IT field to no avail. However, the code works just fine locally, and the S3 is still being used as listing the QR codes.
 
 **AutoScaling and CloudWatch**
+
 For the web app to be auto scalable, I created an AMI of the EC2 instance that hosts the website. Then I created a launch configuration using the AMI. After that, I make an auto scaling group that can scale up to 4 instances. To know when to add or remove instances according to demand, I used CloudWatch to monitor the CPU Utilization and decide to either Scale Up and Down every 200 seconds. I also set up my email to receive alerts of when this happens.
 
 **Database**
